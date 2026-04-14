@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+node_modules/
+dist/
+build/
+.env
+file-converter/
+.DS_Store

@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+}
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 transition-colors duration-300 font-sans;
+}
+
+.dark body {
+  @apply bg-slate-950 text-slate-100;
+}
