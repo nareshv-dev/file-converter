@@ -12,7 +12,8 @@ def convert_pdf_to_docx(pdf_bytes: bytes) -> bytes:
     
     try:
         cv = Converter(temp_pdf_path)
-        cv.convert(temp_docx_path, start=0, end=None)
+        # Disable table parsing to prevent false tables and layout breaking
+        cv.convert(temp_docx_path, start=0, end=None, parse_lattice_table=False, parse_stream_table=False)
         cv.close()
         
         with open(temp_docx_path, "rb") as f:
